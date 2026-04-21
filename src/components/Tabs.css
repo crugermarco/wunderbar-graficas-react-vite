@@ -1,0 +1,75 @@
+.tabs-container {
+    width: 100%;
+  }
+  
+  .tabs-header {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid rgba(71, 85, 105, 0.5);
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .tab-button {
+    background: none;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    color: #94a3b8;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .tab-button:hover {
+    color: #10b981;
+  }
+  
+  .tab-button.active {
+    color: #10b981;
+  }
+  
+  .tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #10b981;
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .tab-panel {
+    display: none;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .tab-panel.active {
+    display: block;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

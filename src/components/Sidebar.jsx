@@ -26,7 +26,7 @@ const Sidebar = ({ activeSection, onSectionChange }) => {
     <div className="sidebar glass-card" style={{ borderRadius: 0 }}>
       <div className="sidebar-header">
         <h1 className="sidebar-title">GRÁFICAS Y ANÁLISIS</h1>
-        <p className="sidebar-subtitle">Sistema de Monitoreo CRUGER 2.0</p>
+        <p className="sidebar-subtitle">Sistema de Monitoreo CRUGER v3.0.1</p>
       </div>
 
       {menuSections.map((section, idx) => (
